@@ -1,0 +1,224 @@
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.body-top,
+.body-bottom {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -9;
+}
+
+.body-top {
+    background-image: url("../images/bg-pattern-top-desktop.svg");
+    top: 0;
+    left: -60%;
+}
+
+.body-bottom {
+    background-image: url("../images/bg-pattern-bottom-desktop.svg");
+    bottom: -30%;
+    right: 0%;
+}
+
+.main {
+    width: 75%;
+    margin: 100px auto 0;
+}
+
+.top-left {
+    /* background-color: green; */
+    width: 40%;
+}
+
+.top-left h2 {
+    font-size: 3.5rem;
+}
+
+.top-left p {
+    color: var(--Dark-Grayish-Magenta);
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+
+.top-right {
+    width: 50%;
+
+}
+
+.top-right .rated-div {
+    background-color: var(--Light-Grayish-Magenta);
+    margin: 1rem;
+    width: 100%;
+    padding: 1.8rem 1.5rem;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.top-right .rated-div:nth-child(2) {
+    margin-left: 4rem;
+}
+
+.top-right .rated-div:nth-child(3) {
+    margin-left: 8rem;
+}
+
+
+/*  Start Styling For bottom Section */
+.bottom {
+    margin: 3rem 0 0;
+}
+
+.bottom-div {
+    width: 32%;
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    padding: 1rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.bottom-div-top {
+    margin-bottom: 1rem;
+}
+
+.bottom-div-top img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 25%;
+}
+
+.bottom-div-top .header {
+    width: 70%;
+}
+
+.bottom-div-top .header p {
+    color: var(--Soft-Pink);
+    margin-top: .4rem;
+}
+
+.bottom-div-body p {
+    line-height: 1.6;
+}
+
+.bottom-div:nth-child(2) {
+    margin-top: 3rem;
+}
+
+.bottom-div:nth-child(3) {
+
+    margin-top: 6rem;
+}
+
+/* Media Screen */
+@media screen and (min-width : 375px) and (max-width : 779px) {
+    .flex {
+        flex-flow: column;
+    }
+
+    .body-top {
+        background-image: url("../images/bg-pattern-top-mobile.svg");
+        top: -50%;
+        left: -30%;
+    }
+
+    .body-bottom {
+        position: relative;
+        background-image: url("../images/bg-pattern-bottom-mobile.svg");
+        background-size: 100% 100%;
+        width: 100%;
+        margin-top: -8rem;
+        height: 200px;
+    }
+
+    .main {
+        width: 90%;
+        margin: 100px auto 0;
+        text-align: center;
+    }
+
+    .top-left {
+        width: 90%;
+    }
+    .top-left h2 {
+        font-size: 2.5rem;
+    }
+
+    .top-left p {
+        margin-top: 2rem;
+        line-height: 1.5;
+    }
+    .top-right {
+        width: 100%;
+    }
+    .top-right .rated-div {
+        margin: 1rem 0;
+        width: 100%;
+        padding: 1.8rem 1.5rem;
+    }
+
+    .top-right .rated-div span {
+        margin-bottom: 1rem;
+    }
+
+    .top-right .rated-div:nth-child(2) {
+        margin-left: 0rem;
+    }
+
+    .top-right .rated-div:nth-child(3) {
+        margin-left: 0rem;
+    }
+    /*  Start Styling For bottom Section */
+    .bottom {
+        margin: 3rem 0;
+    }
+
+    .bottom-div {
+        width: 90%;
+        text-align: start;
+        padding: 3rem;
+    }
+
+    .bottom-div-top {
+        margin-bottom: 2rem;
+        flex-flow: row;
+    }
+
+    .bottom-div:nth-child(2),
+    .bottom-div:nth-child(3) {
+        margin-top: 1rem;
+    }
+}
